@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Zamanı!</title>
+    <style>
+        .bilgiler  {
+            position: relative;
+            text-align: left;
+            margin-top: 100px;
+            margin-left: 10px;
+            color: #7b7474;
+        }
+        .anagövde a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #ff000000;
+            border: 0px solid #00000000;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: lighter;
+            position: relative;
+        }
+        .anagövde a::after {
+            content: "";
+            display: block;
+            height: 0.2px;
+            width: 100%;
+            background-color: #575151;
+            position: absolute;
+            bottom: -225;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .anagövde a:hover::after {
+            opacity: 1;
+        }
+        .anagövde a:hover {
+            transform: scale(1.2);
+        }
+        .butongrup {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .anagövde img {
+            width: 100%;
+            height: auto;
+        }
+        .butongrup {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        h1 {
+            text-align: center;
+        }
+        h5 {
+            margin-top: 590px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="anagövde">
+        <img src="assets/image/kush-dwivedi-F5Wuj4axuMI-unsplash.jpg" alt="Kamp Resmi">
+        <div class="butongrup">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="kamp.html">Kamp Etkinliği</a>
+            <a href="dagtırmanısı.html">Dağ Tırmanışı</a>
+            <a href="mısırgezisi.html">Mısır Gezisi</a>
+            <a href="iletisim.html">İletişim</a>
+            
+            <div class ="bilgiler">
+                <h1 align="center">Etkinlikzamanı A.Ş</h1>
+                <p><h4 align="center">Kaliteli ve ucuz turlar için kurulmuş bir şirket<br>İstediğiniz zaman rezerve ve iptal yapabileceğiniz tur imkanları<br>Açık büfe ile sınırsız yemek imkanları<br>Özel araç ve günlük 10+ aktivite imkanı</h4></p> 
+                <h5 align="center">Tüm hakları ebediyen saklıdır kardeş</h5>
+            </div>  
+
+        </div>
+    </div>
+</body>
+</html>
