@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Zamanı / Mısır Gezisi</title>
+    <style>
+        .bilgiler2 {
+            position: absolute;
+            margin-left: 800px;
+            margin-top: -200px;
+            text-align: right;
+            font-weight: lighter;
+            
+
+        }
+        .kayit-ol {
+            display: inline-block;
+            margin-top: 0px;
+            padding: 10px 15px;
+            background-color: #c1c0c0;
+            border: 1;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+        .anagövde a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 10px;
+            background-color: #ff000000;
+            border: 0px solid #00000000;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #333;
+            font-weight: lighter;
+            position: relative;
+            transition: transform 0.1s ease;
+        }
+        .anagövde a:hover {
+            transform: scale(1.2);
+        }
+        .anagövde {
+            position: relative;
+            text-align: center;
+        }
+        .bilgiler  {
+            position: relative;
+            text-align: left;
+            margin-top: 100px;
+            margin-left: -300px;
+        }
+        .anagövde a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #ff000000;
+            border: 0px solid #00000000;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #333;
+            font-weight: lighter;
+            position: relative;
+        }
+        .anagövde a::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: #575151;
+            position: absolute;
+            bottom: -225;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .anagövde a:hover::after {
+            opacity: 1;
+        }
+        .anagövde img {
+            width: 100%;
+            height: auto;
+        }
+        .butongrup {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        h1 {
+            text-align: left;
+        }
+        h5 {
+            text-align: rights;
+        }
+</style>
+</head>
+<body>
+    
+    <div class="anagövde">
+        <img src="assets/image/thom-holmes-5i7095_H1AU-unsplash.jpg" alt="Kamp Resmi">
+
+        <div class="butongrup">
+            <a href="index.html">Ana sayfa</a>
+            <a href="about.html">Hakkında</a>
+            <a href="kamp.html">Kamp Etkinliği</a>
+            <a href="dagtırmanısı.html">Dağ Tırmanışı</a>        
+            <a href="iletisim.html">İletişim</a>
+
+            <div class="bilgiler">
+                <h1 align="left">TURA KAYIT OL</h1>
+                <p>
+                    <h4 align="left">-Turlarımıza her şey dahildir<br>-10+ dan fazla aktivite ile tüm gün eğlence garantisi<br>-Özel araç<br>-Sabah öyle akşam yemeği<br>sadece 8999TL!</h4>
+                </p>
+                <a href="mısırk.html" class="kayit-ol">Kayıt Ol</a>
+            </div>
+            <div class="bilgiler2">
+                <h5 align="right">EN BÜYÜK GÜZELLİKLERE ŞAHİT OL!</h5>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 
