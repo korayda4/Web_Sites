@@ -4,86 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iletişim</title>
+    <title>Etkinlik Zamanı!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Sigmar&display=swap" rel="stylesheet">
     <style>
-        .bilgiler h1 {
-            text-align: left;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        .bilgiler  {
-            position: relative;
-            text-align: left;
-            margin-top: 150px;
-            margin-left: -250px;
-            color: #ffffff;
+        .container {
+            background-image: url("assets/image/neom-NPDnHmYsl6Y-unsplash.webp");
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .anagövde a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            background-color: #ff000000;
-            border: 0px solid #00000000;
-            border-radius: 2px;
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: lighter;
-            position: relative;
-        }
-        .anagövde a::after {
-            content: "";
-            display: block;
-            height: 0.2px;
-            width: 100%;
-            background-color: #575151;
+        .headermenu {
             position: absolute;
-            bottom: -225;
-            left: 0;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        .anagövde a:hover::after {
-            opacity: 1;
-        }
-        .anagövde a:hover {
-            transform: scale(1.2);
-        }
-        .butongrup {
-            position: absolute;
-            top: 0;
+            top: 5%;
             left: 50%;
-            transform: translateX(-50%);
-        }
-        .anagövde img {
-            width: 100%;
-            height: 100%;
-        }
-        .butongrup {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        h1 {
+            transform: translate(-50%, -50%); 
             text-align: center;
         }
+
+        .headermenu .menu {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            align-items: center; 
+
+        }
+        .headermenu .menu a {
+            font-size: 14px;
+            padding: 10px 15px;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            white-space: nowrap;
+            transition: transform 0.3s ease;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        .headermenu .menu a.show {
+            opacity: 1;
+            transform: translateY(15);
+        }  
+
+
+           
+        .headermenu .menu a:hover {
+            transform: scale(1.1);
+        }
+        .information-message {
+            backdrop-filter: blur(5px);
+            font-family: 'Dancing Script', cursive;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            text-align: center;
+            box-shadow: 0 0 0 1px #00000081;
+            background-color: #00000000;
+            opacity: 1 1s ease;
+            
+            width: 1080px;
+            padding: 10px;
+            border-radius: 25px;
+        } 
+        .ust-bilgi h2{
+            color: rgb(0, 0, 0); 
+            background-color: #23232300;
+            padding: 50px;
+            border-radius: 25px; 
+        }
+        .image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .alt-kisim p {
+            letter-spacing: 10px;
+            color: aliceblue;
+            font-size: 18px;
+            text-align: center;
+        }
+        .headermenu .menu a[href="iletisim.html"] {
+        letter-spacing: 5px;
+        color: rgb(0, 0, 0);
+        background-color: #00000047;
+        backdrop-filter: blur(25px);
+        border-radius: 500px;
+        }     
     </style>
 </head>
 <body>
-    
-    <div class="anagövde">
-        <img src="assets/image/marek-piwnicki-F_U4oUVz6yc-unsplash.webp" alt="Kamp Resmi">
-        <div class="butongrup">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="about.html">Hakkında</a>
-            <a href="kamp.html">Kamp Etkinliği</a>
-            <a href="dagtırmanısı.html">Dağ Tırmanışı</a>
-            <a href="mısırgezisi.html">Mısır Gezisi</a>
-
-            <div class ="bilgiler">
-                <h1 align="left">BİZE ULAŞ</h1>
-                <p><h4 align="left">TELEFON NUMARASI: 0212 850 65 62<br>KONUM: İstanbul/Maslak<br>MAİL: Etkinlikzamani@gmail.com<br>SOSYAL MEDYA: İnstagram:Etkinlik_Zamanı</h4></p> 
-            </div>  
-
+    <img class="image" src="assets/image/marek-piwnicki-F_U4oUVz6yc-unsplash.webp" alt="deneme">
+    <div class="container">
+        <header class="headermenu">
+            <nav class="menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkında</a>
+                <a href="dagtırmanısı.html">Dağ Tırmanışı</a>
+                <a href="mısırgezisi.html">Mısır Gezisi</a>
+                <a href="kamp.html">Kamp Etkinliği</a>
+                <a href="iletisim.html">İletişim</a>  
+            </nav>
+        </header>
+        <div class="information-message">
+            <div class="ust-bilgi">
+                <h1>
+                   BİZE ULAŞ!
+                </h1>  
+            </div>
+            <div class="alt-kisim">
+                <p>TELEFON NUMARASI : 0212 850 65 62</p>
+                <p>---------------------------------</p>
+                <p>E-POSTRA : İNFO@ETKİNLİKZAMANİ</p>
+                <p>------------------------------</p>
+                <p>KONUM : İSTANBUL/MASLAK 1453</p>
+                <p>-----------------------------</p>
+                <p>INSTAGRAM : ETKİNLİKZAMANi</p>
+            </div>
         </div>
-    </div>
+    </div>  
 </body>
 </html>
+

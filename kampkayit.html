@@ -4,123 +4,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamp Kayıt</title>
+    <title>Etkinlik Zamanı!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Sigmar&display=swap" rel="stylesheet">
     <style>
-        .bilgiler2 {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-image: url("assets/image/neom-NPDnHmYsl6Y-unsplash.webp");
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .headermenu {
             position: absolute;
-            margin-left: 800px;
-            margin-top: -200px;
-            text-align: right;
-            font-weight: lighter;
-            
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            text-align: center;
+        }
+
+        .headermenu .menu {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            align-items: center; 
 
         }
-        .kayit-ol {
-            display: inline-block;
-            margin-top: 0px;
+        .headermenu .menu a {
+            font-size: 14px;
             padding: 10px 15px;
-            background-color: #c1c0c0;
-            border: 1;
             border-radius: 2px;
             text-decoration: none;
             color: #000000;
             font-weight: bold;
-        }
-        .anagövde a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 10px;
-            background-color: #ff000000;
-            border: 0px solid #00000000;
-            border-radius: 2px;
-            text-decoration: none;
-            color: #333;
-            font-weight: lighter;
             position: relative;
-            transition: transform 0.1s ease;
-        }
-        .anagövde a:hover {
-            transform: scale(1.2);
-        }
-        .anagövde {
+            white-space: nowrap;
+            transition: transform 0.3s ease;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
             position: relative;
-            text-align: center;
+            opacity: 1;
+            transform: translateY(-3px);
         }
-        .bilgiler  {
-            position: relative;
-            text-align: left;
-            margin-top: 100px;
-            margin-left: -300px;
-        }
-        .anagövde a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 15px;
-            background-color: #ff000000;
-            border: 0px solid #00000000;
-            border-radius: 2px;
-            text-decoration: none;
-            color: #333;
-            font-weight: lighter;
-            position: relative;
-        }
-        .anagövde a::after {
+        .headermenu .menu a.show {
+            opacity: 1;
+            transform: translateY(15);
+        }  
+
+        .menu a::after {
             content: "";
             display: block;
             height: 1px;
             width: 100%;
-            background-color: #575151;
+            background-color: #000000;
             position: absolute;
             bottom: -225;
             left: 0;
             opacity: 0;
             transition: opacity 1s ease;
         }
-        .anagövde a:hover::after {
-            opacity: 1;
+         .menu a:hover::after { 
+            opacity: 1; 
         }
-        .anagövde img {
-            width: 100%;
-            height: auto;
+           
+        .headermenu .menu a:hover {
+            transform: scale(1.1);
         }
-        .butongrup {
+        .information-message {
+            backdrop-filter: blur(5px);
+            font-family: 'Dancing Script', cursive;
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%); 
+            text-align: center;
+            box-shadow: 0 0 0 1px #00000081;
+            background-color: #00000000;
+            opacity: 1 1s ease;
+            
+            width: 1080px;
+            padding: 10px;
+            border-radius: 25px;
+        } 
+        .ust-bilgi h2{
+            color: rgb(0, 0, 0); 
+            background-color: #23232300;
+            padding: 50px;
+            border-radius: 25px; 
         }
-        h1 {
-            text-align: left;
+        .image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
         }
-        h5 {
-            text-align: rights;
+        .alt-kisim p {
+            color: aliceblue;
+            font-size: 18px;
+            text-align: center;
         }
+        .alt-kisim a {
+            color: #938799;
+            font-size: 20px;
+            font-family: 'Sigmar', cursive;
+        }    
     </style>
 </head>
 <body>
-    
-    <div class="anagövde">
-        <img src="assets/image/thom-holmes-5i7095_H1AU-unsplash.webp" alt="Kamp Resmi">
-
-        <div class="butongrup">
-            <a href="index.html">Ana sayfa</a>
-            <a href="about.html">Hakkında</a>
-            <a href="mısırgezisi.html">Mısır Gezisi</a>
-            <a href="dagtırmanısı.html">Dağ Tırmanışı</a>        
-            <a href="iletisim.html">İletişim</a>
-
-            <div class="bilgiler">
-                <h1 align="left">KAMP ETKİNLİĞİNE KAYIT OL</h1>
-                <p>
-                    <h4 align="left">-Turlarımıza her şey dahildir<br>-10+ dan fazla aktivite ile tüm gün eğlence garantisi<br>-Özel araç<br>-Sabah öyle akşam yemeği<br>sadece 12999TL!</h4>
-                </p>
-                <a href="kayitol.html" class="kayit-ol">Kayıt Ol</a>
+    <img class="image" src="assets/image/thom-holmes-5i7095_H1AU-unsplash.webp" alt="deneme">
+    <div class="container">
+        <header class="headermenu">
+            <nav class="menu">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="about.html">Hakkında</a>
+                <a href="dagtırmanısı.html">Dağ Tırmanışı</a>
+                <a href="mısırgezisi.html">Mısır Gezisi</a>
+                <a href="kamp.html">Kamp Etkinliği</a>
+                <a href="iletisim.html">İletişim</a>  
+            </nav>
+        </header>
+        <div class="information-message">
+            <div class="ust-bilgi">
+                <h1>
+                   KAMP ETKİNLİĞİ
+                </h1>  
             </div>
-            <div class="bilgiler2">
-                <h5 align="right">EN BÜYÜK GÜZELLİKLERE ŞAHİT OL!</h5>
+            <div class="alt-kisim">
+                <p>4 GÜN 3 GECE</p> 
+                <p>ÖZEL ARAÇ İMKANI</p> 
+                <p>YEMEK VE ÇADIR DAHİL</p>
+                <p>15+ AKTİVİTE İMKANI</p> 
+                <p>7299TL</p> 
+                <a href="dagkayit.html">REZERVASYON YAP</a>
             </div>
         </div>
-    </div>
+    </div>  
 </body>
 </html>
- 
