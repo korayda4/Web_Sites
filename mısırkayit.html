@@ -39,7 +39,6 @@
         }
         .headermenu .menu a {
             top: 10%;
-            font-family: 'Sigmar', cursive;
             font-size: 14px;
             padding: 10px 15px;
             border-radius: 2px;
@@ -101,9 +100,14 @@
             border-radius: 25px; 
         }
         .image {
-            width: 100%;
-            height: 100vh;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
         .alt-kisim p {
             color: aliceblue;
