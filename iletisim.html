@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etkinlik Zamanı!</title>
+    <title>Etkinlik Zamanı/iletişim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
 
         }
         .headermenu .menu a {
-            top: 10%;
+            box-shadow: 5px;
             font-size: 14px;
             padding: 10px 15px;
             border-radius: 2px;
@@ -51,9 +51,15 @@
             background-color: rgba(0, 0, 0, 0);
             padding: 10px;
             border-radius: 5px;
+            top: 20%;
             position: relative;
-            opacity: 1;
-            transform: translateY(-3px);
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fade-in-menu 2s ease forwards
+        }
+        @keyframes fade-in-menu {
+            0% { opacity: 0; }
+            100% { opacity: 1; } 
         }
         .headermenu .menu a.show {
             opacity: 1;
@@ -69,18 +75,28 @@
             backdrop-filter: blur(5px);
             font-family: 'Dancing Script', cursive;
             position: absolute;
-            top: 50%;
+            top: 100%; 
             left: 50%;
-            transform: translate(-50%, -50%); 
+            transform: translateX(-50%); 
             text-align: center;
             box-shadow: 0 0 0 1px #00000081;
             background-color: #00000000;
-            opacity: 1 1s ease;
-            
+            opacity: 0; 
             width: 1080px;
             padding: 10px;
             border-radius: 25px;
-        } 
+            animation: fade-in 1s ease forwards, slide-up 1s ease forwards; 
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; } 
+            100% { opacity: 1; } 
+        }
+
+        @keyframes slide-up {
+            0% { top: 100%; } 
+            100% { top: 30%; } 
+        }
         .ust-bilgi h2{
             color: rgb(0, 0, 0); 
             background-color: #23232300;
@@ -150,7 +166,7 @@
                 <p>------------------------------</p>
                 <p>KONUM : İSTANBUL/MASLAK 1453</p>
                 <p>-----------------------------</p>
-                <p>INSTAGRAM : ETKİNLİKZAMANi</p>
+                <p>INSTAGRAM : ETKİNLİKZAMANİ</p>
             </div>
         </div>
     </div>  

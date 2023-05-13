@@ -38,6 +38,7 @@
 
         }
         .headermenu .menu a {
+            box-shadow: 5px;
             font-size: 14px;
             padding: 10px 15px;
             border-radius: 2px;
@@ -50,17 +51,20 @@
             background-color: rgba(0, 0, 0, 0);
             padding: 10px;
             border-radius: 5px;
-            top: 10%;
+            top: 20%;
             position: relative;
-            opacity: 1;
-            transform: translateY(-3px);
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fade-in-menu 2s ease forwards
+        }
+        @keyframes fade-in-menu {
+            0% { opacity: 0; }
+            100% { opacity: 1; } 
         }
         .headermenu .menu a.show {
             opacity: 1;
             transform: translateY(15);
-        }  
-
-           
+        }
         .headermenu .menu a:hover {
             transform: scale(1.1);
         }
@@ -68,17 +72,26 @@
             backdrop-filter: blur(5px);
             font-family: 'Dancing Script', cursive;
             position: absolute;
-            top: 50%;
+            top: 100%; 
             left: 50%;
-            transform: translate(-50%, -50%); 
+            transform: translateX(-50%); 
             text-align: center;
             box-shadow: 0 0 0 1px #00000081;
             background-color: #00000000;
-            
+            opacity: 0; 
             width: 1080px;
             padding: 10px;
             border-radius: 25px;
-        } 
+            animation: fade-in 1s ease forwards, slide-up 1s ease forwards; 
+        }
+        @keyframes fade-in {
+            0% { opacity: 0; } 
+            100% { opacity: 1; } 
+        }
+        @keyframes slide-up {
+            0% { top: 100%; } 
+            100% { top: 35%; } 
+        }
         .ust-bilgi h2{
             color: rgb(0, 0, 0); 
             background-color: #23232300;
@@ -113,7 +126,35 @@
             background-color: #0000005c;
             border-radius: 20px;
         }
-
+        .ikinci-kisim {
+            opacity: 0;
+            font-size: small;
+            max-width: 1025px;
+            min-width: 1025px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center; 
+            white-space: nowrap;
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 11%;
+            padding: 5px;
+            background-color: #00000000;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 0 1px #00000081;
+            text-align: center;
+            border-radius: 25px;
+            animation: opacity-up 1s ease forwards,sliding-up 1s ease forwards;
+        }
+        @keyframes opacity-up {
+            0% { opacity: 0; } 
+            100% { opacity: 1; } 
+        }
+        @keyframes sliding-up {
+            0% { top: 100%; } 
+            100% { top: 50%; }   
+        }
     </style>
 </head>
 <body>
@@ -140,6 +181,13 @@
             <div class="alt-kisim">
                 <p>ÖZEL İMKANLAR VE %10 İNDİRİM İLE YENİ SEZON BAŞLIYOR</p>
             </div>
+        </div>
+        <div class="ikinci-kisim">
+            <p >ÖZEL ARAÇ İMKANLARI</p>
+            <p >VIP UÇAK BİLETLERİ</p>
+            <p >%10 İNDİRİM</p>
+            <p >5 YILDIZLI HOTEL İMKANI</p>
+            <p >YEMEK DAHİL TURLAR</p>         
         </div>
     </div>  
 </body>
